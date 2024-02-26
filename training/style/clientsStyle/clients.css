@@ -4,12 +4,18 @@
   font-family: Arial, Verdana, sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 header a {
   margin-right: 14%;
@@ -30,12 +36,16 @@ header .header-text p {
 main {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
 }
 main .left {
-  width: 50vw;
+  padding-bottom: 5%;
+  background-color: white;
+  width: 80vw;
+  box-shadow: 2px 2px 5px black;
 }
 main .left .left-header {
   background-color: #EF7D3F;
@@ -45,57 +55,75 @@ main .left .left-header {
 main .left .left-header h2 {
   color: white;
   font-size: 30px;
-  text-align: right;
-  margin-right: 4%;
+  text-align: center;
 }
 main .left .left-link {
-  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 }
-main .left .left-link li {
+main .left .left-link .link {
+  padding: 2%;
+  border-bottom: 2px solid #203E7C;
+  width: 75vw;
+}
+main .left .left-link .link ul {
   list-style-type: none;
-  text-align: right;
-  margin-right: 4%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
-main .left .left-link li a {
+main .left .left-link .link ul a {
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
   color: #203E7C;
-  line-height: 25px;
+  margin-right: 20px;
+  font-size: 17px;
 }
-main .left .left-link li a:hover {
+main .left .left-link .link ul a.active {
   color: #EF7D3F;
+  border-bottom: 3px solid #EF7D3F;
 }
-main .right {
-  width: 50vw;
+main .left .left-link .link ul a:hover {
+  color: #EF7D3F;
+  border-bottom: 3px solid #EF7D3F;
 }
-main .right .right-header {
+main .left .left-link .page_content {
+  margin-top: 5%;
+  line-height: 35px;
+  font-size: 13px;
+}
+main .right-block .right-header {
   background-color: #EF7D3F;
-  padding: 20px;
+  padding: 23px;
+  box-shadow: inset 2px 2px 5px black;
   cursor: pointer;
 }
-main .right .right-header h2 {
-  font-size: 30px;
+main .right-block .right-header h2 {
+  font-size: 23px;
   color: white;
   text-align: left;
   margin-left: 4%;
+  width: 234px;
 }
-main .right .right-link {
+main .right-block .right-link {
   margin-top: 5%;
+  height: 100vh;
 }
-main .right .right-link li {
+main .right-block .right-link li {
   list-style-type: none;
   text-align: left;
   margin-left: 4%;
 }
-main .right .right-link li a {
+main .right-block .right-link li a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   color: #203E7C;
   line-height: 25px;
 }
-main .right .right-link li a:hover {
+main .right-block .right-link li a:hover {
   color: #EF7D3F;
 }
 
@@ -157,8 +185,7 @@ main .right .right-link li a:hover {
 
 .footer {
   width: 100%;
-  bottom: 0;
-  position: absolute;
+  flex: 0 0 auto;
   background-color: #203E7C;
   display: flex;
   flex-direction: row;
@@ -230,4 +257,4 @@ main .right .right-link li a:hover {
 }
 .footer .address p {
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=clients.css.map */

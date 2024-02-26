@@ -3,6 +3,11 @@
     padding:0;
     font-family:Arial, Verdana, sans-serif;
 }
+body{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+}
 $orange: #EF7D3F;
 $blue: #203E7C;
 header{
@@ -10,7 +15,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     a{
         margin-right: 14%;
         padding: 5px;
@@ -27,66 +32,101 @@ header{
         }
     }
 }
-
 main{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    .left{
-        width: 50vw;
-        .left-header{
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: rgb(128,128,128, 0.5);
+    .right{
+        padding-bottom: 5%;
+        background-color: white;
+        width: 80vw;
+        box-shadow: 2px 2px 5px black;
+        .right-header{
             background-color: #EF7D3F;
-            
             padding: 20px;
             cursor: pointer;
             h2{
                 color: white;
                 font-size: 30px;
-                text-align: right;
-                margin-right: 4%;
+                text-align: center;
             }
         }
-        .left-link{
-            margin-top: 5%;
-            li{
-                list-style-type: none;
-                text-align: right;
-                margin-right: 4%;
-                a{
-                    text-decoration: none;
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: #203E7C;
-                    line-height: 25px;
-                    &:hover{
-                        color: $orange;
+        .right-link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:space-around;
+            .link{
+                padding: 2%;
+                border-bottom: 2px solid $blue;
+                width: 75vw;
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        text-decoration: none;
+                        color: $blue;
+                        margin-right: 20px;
+                        font-size: 17px;
+                        &.active{
+                            color: #EF7D3F;
+                            border-bottom: 3px solid $orange;
+                        }
+                        &:hover{
+                            color: #EF7D3F;
+                            border-bottom: 3px solid $orange;
+                        }
                     }
                 }
             }
         }
-    }
-    .right{
-        width: 50vw;
-        .right-header{
-            background-color: #EF7D3F;
-            padding: 20px;
-            
-            cursor: pointer;
-            h2{
-                font-size: 30px;
-                color: white;
-                text-align: left;
-                margin-left: 4%;
+        .text{
+            width: 60vw;
+            margin: 5%;
+            h4{
+                font-size: 15px;
+                margin-top: 5%;
+            }
+            p{
+                margin-top: 2%;
+                font-size: 14px;
+            }
+            a{
+                font-size: 14px;
+                color: $blue;
+                &:hover{
+                    color: #EF7D3F;
+                }
             }
         }
-        .right-link{
+    }
+    
+    .left{
+        .left-header{
+            background-color: #EF7D3F;
+            padding: 23px;
+            box-shadow:inset 2px 2px 5px black;
+            cursor: pointer;
+            h2{
+                font-size: 23px;
+                color: white;
+                text-align: center;
+                width: 234px;
+            }
+        }
+        .left-link{
             margin-top: 5%;
+            height: 100vh;
             li{
                 list-style-type: none;
-                text-align: left;
-                margin-left: 4%;
+                text-align: right;
+                margin-right: 5%;
                 a{
                     text-decoration: none;
                     font-size: 18px;
@@ -101,6 +141,7 @@ main{
         }
     }
 }
+
 @keyframes mapAnim {
     0%{
         opacity: 0;
@@ -148,10 +189,8 @@ main{
 }
 .footer{
     width: 100%;
-    bottom: 0;
-    position: absolute;
+    flex: 0 0 auto;
     background-color: #203E7C;
-
     display: flex;
     flex-direction: row;
     align-items: center;

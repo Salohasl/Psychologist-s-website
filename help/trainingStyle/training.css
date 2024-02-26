@@ -4,12 +4,18 @@
   font-family: Arial, Verdana, sans-serif;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  width: 100vw;
+  width: 100%;
 }
 header a {
   margin-right: 14%;
@@ -30,31 +36,98 @@ header .header-text p {
 main {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.5);
 }
-main .left {
-  width: 50vw;
+main .right {
+  padding-bottom: 5%;
+  background-color: white;
+  width: 80vw;
+  box-shadow: 2px 2px 5px black;
 }
-main .left .left-header {
+main .right .right-header {
   background-color: #EF7D3F;
   padding: 20px;
   cursor: pointer;
 }
-main .left .left-header h2 {
+main .right .right-header h2 {
   color: white;
   font-size: 30px;
-  text-align: right;
-  margin-right: 4%;
+  text-align: center;
+}
+main .right .right-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+main .right .right-link .link {
+  padding: 2%;
+  border-bottom: 2px solid #203E7C;
+  width: 75vw;
+}
+main .right .right-link .link ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+main .right .right-link .link ul a {
+  text-decoration: none;
+  color: #203E7C;
+  margin-right: 20px;
+  font-size: 17px;
+}
+main .right .right-link .link ul a.active {
+  color: #EF7D3F;
+  border-bottom: 3px solid #EF7D3F;
+}
+main .right .right-link .link ul a:hover {
+  color: #EF7D3F;
+  border-bottom: 3px solid #EF7D3F;
+}
+main .right .text {
+  width: 60vw;
+  margin: 5%;
+}
+main .right .text h4 {
+  font-size: 15px;
+  margin-top: 5%;
+}
+main .right .text p {
+  margin-top: 2%;
+  font-size: 14px;
+}
+main .right .text a {
+  font-size: 14px;
+  color: #203E7C;
+}
+main .right .text a:hover {
+  color: #EF7D3F;
+}
+main .left .left-header {
+  background-color: #EF7D3F;
+  padding: 23px;
+  box-shadow: inset 2px 2px 5px black;
+  cursor: pointer;
+}
+main .left .left-header h2 {
+  font-size: 23px;
+  color: white;
+  text-align: center;
+  width: 234px;
 }
 main .left .left-link {
   margin-top: 5%;
+  height: 100vh;
 }
 main .left .left-link li {
   list-style-type: none;
   text-align: right;
-  margin-right: 4%;
+  margin-right: 5%;
 }
 main .left .left-link li a {
   text-decoration: none;
@@ -64,38 +137,6 @@ main .left .left-link li a {
   line-height: 25px;
 }
 main .left .left-link li a:hover {
-  color: #EF7D3F;
-}
-main .right {
-  width: 50vw;
-}
-main .right .right-header {
-  background-color: #EF7D3F;
-  padding: 20px;
-  cursor: pointer;
-}
-main .right .right-header h2 {
-  font-size: 30px;
-  color: white;
-  text-align: left;
-  margin-left: 4%;
-}
-main .right .right-link {
-  margin-top: 5%;
-}
-main .right .right-link li {
-  list-style-type: none;
-  text-align: left;
-  margin-left: 4%;
-}
-main .right .right-link li a {
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  color: #203E7C;
-  line-height: 25px;
-}
-main .right .right-link li a:hover {
   color: #EF7D3F;
 }
 
@@ -157,8 +198,7 @@ main .right .right-link li a:hover {
 
 .footer {
   width: 100%;
-  bottom: 0;
-  position: absolute;
+  flex: 0 0 auto;
   background-color: #203E7C;
   display: flex;
   flex-direction: row;
@@ -230,4 +270,4 @@ main .right .right-link li a:hover {
 }
 .footer .address p {
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=training.css.map */

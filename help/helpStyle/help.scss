@@ -3,6 +3,11 @@
     padding:0;
     font-family:Arial, Verdana, sans-serif;
 }
+body{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+}
 $orange: #EF7D3F;
 $blue: #203E7C;
 header{
@@ -10,7 +15,7 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     a{
         margin-right: 14%;
         padding: 5px;
@@ -27,66 +32,152 @@ header{
         }
     }
 }
-
 main{
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    .left{
-        width: 50vw;
-        .left-header{
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: rgb(128,128,128, 0.5);
+    .right{
+        padding-bottom: 5%;
+        background-color: white;
+        width: 80vw;
+        box-shadow: 2px 2px 5px black;
+        .right-header{
             background-color: #EF7D3F;
-            
             padding: 20px;
             cursor: pointer;
             h2{
                 color: white;
                 font-size: 30px;
-                text-align: right;
-                margin-right: 4%;
+                text-align: center;
             }
         }
-        .left-link{
-            margin-top: 5%;
-            li{
-                list-style-type: none;
-                text-align: right;
-                margin-right: 4%;
+        .right-link{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:space-around;
+            .link{
+                padding: 2%;
+                border-bottom: 2px solid $blue;
+                width: 75vw;
+                ul{
+                    list-style-type: none;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                        text-decoration: none;
+                        color: $blue;
+                        margin-right: 20px;
+                        font-size: 17px;
+                        &.active{
+                            color: #EF7D3F;
+                            border-bottom: 3px solid $orange;
+                        }
+                        &:hover{
+                            color: #EF7D3F;
+                            border-bottom: 3px solid $orange;
+                        }
+                    }
+                }
+            }
+        }
+        .about{
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: flex-start;
+            .about-text{
+                margin-left: 10%;
+                h4{
+                    margin-top: 5%;
+                }
+                p{
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    font-size: 14px;
+                }
+                h3{
+                    font-size: 15px;
+                    color: $blue;
+                    margin-top: 5%;
+                }
+                ul{
+                    margin-top: 5%;
+                    margin-bottom: 5%;
+                    margin-left: 5%;
+                    font-size: 14px;
+                }
                 a{
-                    text-decoration: none;
-                    font-size: 18px;
-                    font-weight: 500;
-                    color: #203E7C;
-                    line-height: 25px;
+                    color: $blue;
                     &:hover{
                         color: $orange;
                     }
                 }
             }
         }
-    }
-    .right{
-        width: 50vw;
-        .right-header{
-            background-color: #EF7D3F;
-            padding: 20px;
-            
-            cursor: pointer;
+        .about-img{
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-top: 5%;
             h2{
-                font-size: 30px;
-                color: white;
-                text-align: left;
-                margin-left: 4%;
+                font-size: 20px;
+                margin-top: 4%;
+            }
+            p{
+                color: rgb(128,128,128, 0.9);
+                margin-top: 4%;
+                font-size: 12px;
+            }
+            h3{
+                font-size: 13px;
+                color: $blue;
+                text-decoration: underline;
+                margin-top: 5%;
+                cursor: pointer;
+                &:hover{
+                    color: #EF7D3F;
+                }
+            }
+            .btn-text{
+                display: none;
+                &.active{
+                    display: block;
+                }
+                p{
+                    width: 90%;
+                    margin-top: 4%;
+                    font-size: 12px;
+                    color: black;
+                }
             }
         }
-        .right-link{
+    }
+    
+    .left{
+        .left-header{
+            background-color: #EF7D3F;
+            padding: 23px;
+            box-shadow:inset 2px 2px 5px black;
+            cursor: pointer;
+            h2{
+                font-size: 23px;
+                color: white;
+                text-align: center;
+                width: 234px;
+            }
+        }
+        .left-link{
             margin-top: 5%;
+            height: 100vh;
             li{
                 list-style-type: none;
-                text-align: left;
-                margin-left: 4%;
+                text-align: right;
+                margin-right: 5%;
                 a{
                     text-decoration: none;
                     font-size: 18px;
@@ -101,6 +192,7 @@ main{
         }
     }
 }
+
 @keyframes mapAnim {
     0%{
         opacity: 0;
@@ -148,10 +240,8 @@ main{
 }
 .footer{
     width: 100%;
-    bottom: 0;
-    position: absolute;
+    flex: 0 0 auto;
     background-color: #203E7C;
-
     display: flex;
     flex-direction: row;
     align-items: center;
