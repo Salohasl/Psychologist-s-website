@@ -1,0 +1,83 @@
+@media only screen and (max-width:1260px){ 
+    .map .close{
+      margin-left: 55%;
+      margin-bottom: 30%;
+    }
+    main .left .left-link .trainings .trainings-block .text {
+        margin-left: 1%;
+    }
+    main .left .left-link .trainings .trainings-block h3{
+        width: 500px;
+    }
+    main .left .left-link .link{
+      width: 68vw;
+    }
+    main .left .left-link .product-catal .news-text{
+      width: 400px;
+    }
+    main .left .left-link .about .about-text{
+      margin-left: 2%;
+    }
+    main .page_content{
+        margin-left: 2%;
+        margin-right: 3%;
+    }
+  }
+  
+  @media only screen and (max-width:992px){
+    main .left{
+      width: 100vw;
+    }
+    main .left .left-link .link{
+      width: 90vw;
+    }
+    main .right{
+      display: none;
+    }
+
+    .show{
+      display: block !important;
+      position: fixed;
+      right: -78px;
+      top: 250px;
+      transform: rotate(90deg);
+    }
+    .showBtn{
+      
+      background-color: #EF7D3F;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 20px;
+      
+    }
+    .footer{
+      flex-wrap: wrap;
+    }
+  }
+
+
+
+
+  @media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+    .map .close{
+      margin-left: 600px;
+      margin-bottom: 300px;
+    }
+
+  }
+
+
+
+  /* МОБИЛКА*/
+  @media only screen and (max-width:570px){  
+   
+  }
+  @media only screen and (max-width:400px){
+    
+  }
+  @media only screen and (max-width:320px){
+   
+  }
+  

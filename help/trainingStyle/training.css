@@ -44,7 +44,7 @@ main {
 main .right {
   padding-bottom: 5%;
   background-color: white;
-  width: 80vw;
+  width: 100vw;
   box-shadow: 2px 2px 5px black;
 }
 main .right .right-header {

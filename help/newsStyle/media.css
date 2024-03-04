@@ -1,0 +1,72 @@
+@media only screen and (max-width:1260px){ 
+    .map .close{
+      margin-left: 55%;
+      margin-bottom: 30%;
+    }
+    main .right{
+        height: 100vh;
+      }
+      main .right .right-link .link{
+        width: 65vw;
+      }
+     
+      .footer{
+        margin-top: -50px;
+      }
+  }
+  
+  @media only screen and (max-width:992px){
+    .left{
+      display: none;
+  }
+  main .right .right-link .link{
+      width: 90vw;
+  }
+  
+  .text{
+    margin-left: 20% !important;
+  }
+  .footer{
+    margin-top: 0px;
+  }
+
+  .show{
+      display: block !important;
+      position: fixed;
+      left: -78px;
+      top: 240px;
+      transform: rotate(-90deg);
+    }
+    .showBtn{
+      
+      background-color: #EF7D3F;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      font-size: 20px;
+      
+    }
+  }
+
+
+
+
+  @media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+   
+
+  }
+
+
+
+  /* МОБИЛКА*/
+  @media only screen and (max-width:570px){  
+   
+  }
+  @media only screen and (max-width:400px){
+    
+  }
+  @media only screen and (max-width:320px){
+   
+  }
+  

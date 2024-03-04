@@ -1,0 +1,56 @@
+@media only screen and (max-width:1260px){ 
+    .map .close{
+      margin-left: 55%;
+      margin-bottom: 30%;
+    }
+
+      main .right .right-link .link{
+        width: 65vw;
+      }
+      main .right{
+        height: 100vh;
+      }
+      main .right .news_full{
+        width: 60vw;
+      }
+      .footer{
+        margin-top: -50px;
+      }
+    
+      
+  }
+  
+  @media only screen and (max-width:992px){
+    main .right .right-link .link{
+      width: 90vw;
+  }
+    .left{
+      display: none;
+    }
+    .news_full{
+      margin-left: 20% !important;
+    }
+    
+  }
+
+
+
+
+  @media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+   
+
+  }
+
+
+
+  /* МОБИЛКА*/
+  @media only screen and (max-width:570px){  
+   
+  }
+  @media only screen and (max-width:400px){
+    
+  }
+  @media only screen and (max-width:320px){
+   
+  }
+  

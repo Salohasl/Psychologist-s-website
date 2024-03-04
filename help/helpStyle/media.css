@@ -1,0 +1,91 @@
+@media only screen and (max-width:1260px){ 
+    .map .close{
+      margin-left: 55%;
+      margin-bottom: 30%;
+    }
+    main .right .right-link .link{
+        width: 65vw;
+    }
+    main .right .about .about-text{
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    main .right .about{
+        flex-wrap: wrap-reverse;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    main .right .product-catal{
+        width: 500px;
+        margin-left: 50px;
+      }
+      
+      main .right .product-catal .news-text{
+        width: 400px;
+        margin-left: 15px;
+      }
+    main .right .about-img {
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 5%;
+      }
+  }
+  
+  @media only screen and (max-width:992px){
+    .left{
+        display: none;
+    }
+    main .right .right-link .link{
+        width: 90vw;
+    }
+
+    main .right .about-img {
+        margin-left: 8%;
+        margin-right: 2%;
+        margin-top: 5%;
+      }
+      main .right .product{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    .show{
+        display: block !important;
+        position: fixed;
+        left: -78px;
+        top: 240px;
+        transform: rotate(-90deg);
+      }
+      .showBtn{
+        
+        background-color: #EF7D3F;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        font-size: 20px;
+        
+      }
+  }
+
+
+
+
+  @media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+   
+
+  }
+
+
+
+  /* МОБИЛКА*/
+  @media only screen and (max-width:570px){  
+   
+  }
+  @media only screen and (max-width:400px){
+    
+  }
+  @media only screen and (max-width:320px){
+   
+  }
+  

@@ -123,6 +123,7 @@ textarea {
   transform: rotate(-45deg);
 }
 .container{
+  
   z-index: 150;
   position: fixed;
   padding-top: 1000px;
@@ -145,6 +146,7 @@ textarea {
   }
 }
 .container p{
+  
   text-align: center;
   color: black;
   font-size: 16px;
@@ -163,6 +165,7 @@ textarea {
 
 .form-row {
   width: 100%;
+  
 }
 
 @media (min-width: 576px) {
@@ -175,6 +178,7 @@ textarea {
 
 .form-group {
   margin-bottom: 1rem;
+  
 }
 
 .form-control {

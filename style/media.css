@@ -1,0 +1,68 @@
+
+  @media only screen and (max-width:1260px){ 
+    main .left .left-link li a, main .right .right-link li a {
+      font-size: 30px;
+      line-height: 50px;
+    }
+    
+    .map .close{
+      margin-left: 55%;
+      margin-bottom: 30%;
+    }
+  }
+  
+  @media only screen and (max-width:992px){
+    main .left .left-header h2, main .right .right-header h2{
+      text-align: center;
+      font-size: 25px;
+    }
+    main .right .right-link, main .left .left-link {
+      margin-top: 15%;
+    }
+    main .left .left-link li, main .right .right-link li{
+      text-align: center;
+    }
+    main .left .left-link li a, main .right .right-link li a {
+      font-size: 25px;
+      line-height: 50px;
+    }
+    
+      .footer{
+        flex-wrap: wrap;
+      }
+      .map .close{
+        margin-left: 600px;
+        margin-bottom: 300px;
+      }
+  }
+
+
+
+
+  @media only screen and (max-width:768px){ /*-------ГОТОВО-------*/
+   
+
+  }
+
+
+
+  /* МОБИЛКА*/
+  @media only screen and (max-width:570px){  
+    header a{
+      margin-right: 0%;
+    }
+    .footer .politica{
+      margin-bottom: 5%;
+    }
+    .map .close{
+      margin-left: 350px;
+      margin-bottom: 300px;
+    }
+  }
+  @media only screen and (max-width:400px){
+    
+  }
+  @media only screen and (max-width:320px){
+   
+  }
+  
