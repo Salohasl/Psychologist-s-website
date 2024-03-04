@@ -206,6 +206,7 @@ main{
     flex: 0 0 auto;
     background-color: #203E7C;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;

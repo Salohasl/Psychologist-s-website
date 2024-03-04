@@ -19,3 +19,12 @@ function showLeft(){
         window.location.href = '/training/news.html';
     })
 }
+
+function showMenu(){
+    const menuBtn = document.querySelector('.menuBtn');
+    const link = document.querySelector('.menu');
+    menuBtn.addEventListener('click', ()=>{
+        link.classList.toggle('active');
+        menuBtn.classList.toggle('active');
+    })
+}showMenu();

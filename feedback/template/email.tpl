@@ -16,6 +16,8 @@
               <td bgcolor="#fff" style="padding: 15px;">
                 Пользователь <b>%name%</b> оставил следующее сообщение:
                 <hr>
+                %training%
+                <hr>
                 %message%
                 <hr>
                 Телефон: <b>%phone%</b>
@@ -30,7 +32,7 @@
             </tr>
             <tr>
               <td bgcolor="#fff " style="padding: 20px 15px; color: #777; font-size: 14px;">
-                <p>&copy; 2024 kant-design.</p>
+                <p>&copy; 2024 borovikova.com.</p>
               </td>
             </tr>
           </tbody>

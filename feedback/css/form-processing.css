@@ -706,7 +706,7 @@ button[type="submit"]:not(:disabled):focus {
 /* сообщение об успешной отправки формы */
 .form-success {
   position: fixed;
-  
+  padding-top: 300px;
   left: 0;
   right: 0;
   bottom: 0;
@@ -748,7 +748,7 @@ button[type="submit"]:not(:disabled):focus {
 .form-success__btn {
   font-weight: 400;
   border: none;
-  background-color: #710B0B;
+  background-color: #00296b;
   color: white;
   border-radius: 10px;
   box-shadow: 1px 1px 10px black;

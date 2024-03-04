@@ -33,6 +33,27 @@ header .header-text p {
   font-size: 20px;
 }
 
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translate3d(-100%, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 main {
   display: flex;
   flex-direction: row;
@@ -46,6 +67,8 @@ main .left {
   width: 80vw;
   box-shadow: 2px 2px 5px black;
   padding-bottom: 5%;
+  -webkit-animation: show 0.3s ease-in;
+          animation: show 0.3s ease-in;
 }
 main .left .left-header {
   background-color: #EF7D3F;

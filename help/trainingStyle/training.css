@@ -33,6 +33,27 @@ header .header-text p {
   font-size: 20px;
 }
 
+@-webkit-keyframes show {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0px, 0px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
 main {
   display: flex;
   flex-direction: row;
@@ -46,6 +67,8 @@ main .right {
   background-color: white;
   width: 100vw;
   box-shadow: 2px 2px 5px black;
+  -webkit-animation: show 0.3s ease-in;
+          animation: show 0.3s ease-in;
 }
 main .right .right-header {
   background-color: #EF7D3F;
@@ -201,6 +224,7 @@ main .left .left-link li a:hover {
   flex: 0 0 auto;
   background-color: #203E7C;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;

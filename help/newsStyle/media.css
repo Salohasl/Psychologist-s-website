@@ -61,7 +61,146 @@
 
   /* МОБИЛКА*/
   @media only screen and (max-width:570px){  
+    main .right .right-link .link{
+      border: none;
+    }
+    main .right .right-link .link ul{
+      display: none;
+    }
+    main .right .right-link .link ul a{
+      font-size: 30px;
+      color: white;
+    }
+    main .right .right-link .link ul.active{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.9);
+      position: fixed;
+      padding: 2%;
+      padding-top: 30%;
+      line-height: 45px;
+      top: -80px;
+      bottom: 0;
+      left: 0;
+      margin-top: 80px;
+      width: 100%;
+      height: 100vh;
+      -webkit-animation-duration: 0.55s;
+              animation-duration: 0.55s; /* Время работы анимации */
+      -webkit-animation-fill-mode: both;
+              animation-fill-mode: both; /* Поведение анимации */
+      -webkit-animation-name: fadeInDown;
+              animation-name: fadeInDown; /* Имя анимации */
+    }
+    @-webkit-keyframes fadeInDown { /* Сама анимация */
+      0% { /* Старт анимации */
+        opacity: 0;
+        transform: translate3d(100%, 0px, 0px);
+      }
+      100% { /* в финале анимации - финал это заданная 0.55s */
+        opacity: 1;
+        transform: none;
+      }
+    }
+    
+    @keyframes fadeInDown { /* Сама анимация */
+      0% { /* Старт анимации */
+        opacity: 0;
+        transform: translate3d(100%, 0px, 0px);
+      }
+      100% { /* в финале анимации - финал это заданная 0.55s */
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    
+    .menuBtn.active span:nth-of-type(1) {
+      display: none;
+    }
+    
+    .menuBtn.active span:nth-of-type(2) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(45deg);
+      background-color: white;
+    }
+    
+    .menuBtn.active span:nth-of-type(3) {
+      top: 50%;
+      transform: translate(-50%, 0%) rotate(-45deg);
+      background-color: white;
+    }
+    
+    .menuBtn {
+      z-index: 100;
+      cursor: pointer;
+      width: 100px;
+      height: 30px;
+      right: -30px;
+      position: fixed;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menuBtn span {
+      width: 34px;
+      height: 3px;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      background-color: black;
+      transition: all 0.5s;
+      border-radius: 2px;
+    }
+    
+    .menuBtn span:nth-of-type(2) {
+      top: calc(35% - 5px);
+    }
+    
+    .menuBtn span:nth-of-type(3) {
+      top: calc(60% + 5px);
+    }
+    header a{
+      margin-right: 0%;
+    }
+    .header-text{
+      display: none;
+    }
+
+    
+    .showBtn{
+      padding: 10px;
+    }
+    main .right .about{
+      flex-wrap: wrap-reverse;
+      margin-right: 5%;
+    }
    
+    main .right .text{
+      width: 80%;
+      margin-left:50px !important;
+    }
+   
+    
+    .map .close{
+      margin-left: 350px;
+      margin-bottom: 300px;
+    }
+    main .right{
+      height: auto;
+    }
+    .footer .link{
+      align-items: center;
+    }
+    .footer .politica{
+      margin-right: 0%;
+      margin-top: 2%;
+      margin-bottom: 5%;
+    }
   }
   @media only screen and (max-width:400px){
     

@@ -43,11 +43,11 @@ const EMAIL_SETTINGS = [
   'subject' => 'Сообщение с формы обратной связи', // тема письма
   'host' => 'ssl://smtp.yandex.ru', // SMTP-хост
   'username' => 'Sales@kantdesign.ru', // // SMTP-пользователь
-  'password' => 'nrmvbxtthiskbpbi', // SMTP-пароль
+  'password' => '**********', // SMTP-пароль
   'port' => '465' // SMTP-порт
 ];
 const HAS_SEND_NOTIFICATION = false;
-const BASE_URL = 'https://kant-design.ru/';
+const BASE_URL = 'https://borovikova.com/';
 const SUBJECT_FOR_CLIENT = 'Ваше сообщение доставлено';
 //
 const HAS_WRITE_TXT = true;
@@ -78,8 +78,10 @@ if (!empty($_POST['name'])) {
   $data['errors']['name'] = 'Заполните это поле.';
   itc_log('Не заполнено поле name.');
 }
-
-
+//валидация тренинг
+if (isset($_POST['training'])) {
+  $data['form']['training'] = htmlspecialchars($_POST['training']);
+} 
 
 /*Валидация Phone */
 if (!empty($_POST['phone'])) {
@@ -111,8 +113,8 @@ require 'vendor/phpmailer/phpmailer/src/SMTP.php';
 if ($data['result'] == 'success' && HAS_SEND_EMAIL == true) {
   // получаем содержимое email шаблона и заменяем в нём 
   $template = file_get_contents(dirname(__FILE__) . '/template/email.tpl');
-  $search = ['%subject%', '%name%', '%message%', '%phone%', '%date%'];
-  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['message'], $data['form']['phone'], date('d.m.Y H:i')];
+  $search = ['%subject%', '%name%', '%training%', '%message%', '%phone%', '%date%'];
+  $replace = [EMAIL_SETTINGS['subject'], $data['form']['name'], $data['form']['training'], $data['form']['message'], $data['form']['phone'], date('d.m.Y H:i')];
   $body = str_replace($search, $replace, $template);
   // добавление файлов в виде ссылок
   if (HAS_ATTACH_IN_BODY && count($attachs)) {
@@ -193,6 +195,7 @@ if ($data['result'] == 'success' && HAS_SEND_NOTIFICATION) {
 if ($data['result'] == 'success' && HAS_WRITE_TXT) {
   $output = '=======' . date('d.m.Y H:i') . '=======';
   $output .= 'Имя: ' . $data['form']['name'] . PHP_EOL;
+  $output .= 'Треининг: ' . $data['form']['training'] . PHP_EOL;
   $output .= 'Сообщение: ' . $data['form']['message'] . PHP_EOL;
   $output .= 'Телефон: ' . isset($data['form']['phone']) ? $data['form']['phone'] : 'не указан' . PHP_EOL;
   if (count($attachs)) {
